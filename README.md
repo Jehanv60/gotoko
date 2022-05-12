@@ -1,8 +1,8 @@
 # Gotoko
 Aplikasi Go toko
 
-#Sumber Code
+# Sumber Code
 https://github.com/gieart87/gotoko
 
-#Sumber Video Tutorial
+# Sumber Video Tutorial
 https://www.youtube.com/c/IndoKoding
