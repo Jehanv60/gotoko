@@ -1,5 +1,8 @@
-# gotoko
+# Gotoko
 Aplikasi Go toko
 
-Sumber code : https://github.com/gieart87/gotoko
-Sumber Tutorial : https://www.youtube.com/c/IndoKoding
+#Sumber Code
+https://github.com/gieart87/gotoko
+
+#Sumber Video Tutorial
+https://www.youtube.com/c/IndoKoding
