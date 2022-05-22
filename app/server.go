@@ -6,6 +6,8 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/Jehanv60/gotoko/app/models"
+	"github.com/Jehanv60/gotoko/database/seeder"
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
 
@@ -36,6 +38,7 @@ func (server *Server) Initialize(Appconfig Appconfig, dbconfig DBconfig) {
 	fmt.Println("welcome to " + Appconfig.Appname)
 	server.initializeDB(dbconfig)
 	server.initializeroutes()
+	seeder.DBseed(server.DB)
 }
 
 func (server *Server) initializeDB(dbconfig DBconfig) {
@@ -46,7 +49,7 @@ func (server *Server) initializeDB(dbconfig DBconfig) {
 		log.Fatalln("failed conenct database")
 	}
 
-	for _, model := range Registermodels() {
+	for _, model := range models.RegisterModels() {
 		err := server.DB.Debug().AutoMigrate(model.Model)
 		if err != nil {
 			log.Fatalln(err)
